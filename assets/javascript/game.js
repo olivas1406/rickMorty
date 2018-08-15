@@ -51,8 +51,6 @@ $(document).ready(function(){
     $(".flasher2").hide();                          // Hide the 'choose defender' flashers
     $(".attackButton").hide();                      // Hide the 'attack' button
 
-
-
     function rick1() {
         if (tracker2 === true) {                    // If var tracker2 is true
             alert("One Enemy At A Time!");          // There is already an enemy selected, so alert this
@@ -187,9 +185,6 @@ $(document).ready(function(){
         tracker = false;                //  Set tracker to fasle to indicatge an opponent has been selected
     };
     
-
-
-
     $(".pos11").on("click", function() {            // Click event handler for Rick
         rick1();                                    // Call the rick1 function
     });
@@ -260,7 +255,4 @@ $(document).ready(function(){
     $(".resetButton").on("click", function() {
         location.reload();                      // Reload the page when the reset button is clicked
     });
-})
-
-
-
+});
