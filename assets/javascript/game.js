@@ -206,8 +206,34 @@ $(document).ready(function(){
         luc1();                                     // Call the luc1 function 
     });
 
+    function attackerFu() {                                                 // Function for what happens when you attack
+        if (yourChar.HP <= 1) {                                             // If your HP is less than 1, lose condition
+            alert("You have lost the game");                                // Alert this
+            location.reload();                                              // Reload the page
+        } else if (yourDefend.HP <= 1) {                                    // Else If your opponent's HP is less than 1, win condition
+            if (countWin === 2) {                                           // If var 'countWIn' is already at 2 (this is your 3rd win) you win the game
+                alert("YOU WIN");                                           // Alert this
+                location.reload();                                          // Reload the page
+            } else if (deleteMe === 555) {                                  // Else if var 'deleteMe' has been set to 555, no opponent is active
+                $("infoDiv").html("Enemy Defeated - Choose Another Opponent");  // Alert this
+            } else {                                                        // Else
+                tracker2 = false;                                           // Set var 'tracker2' to false
+                $("infoDiv").html("Enemy Defeated");                        // Alert this
+                countWin++                                                  // Increment countWin by 1
+                yourChar.Attack = yourChar.Attack + yourChar.Attack;        // Increase your character's attack power by itself
+                hpPush();                                                   // Call the htmlPush function to update the HP in the HTML
+                seeWhoGo();                                                 // Call the seeWhoGo function to delete the defeated character
+            }
+        } else {                                                            // Else alert this
+            $(".infoDiv").html("What's going down: You Attacked for " + yourChar.Attack + " damage, you were Counter Attacked for " + yourDefend.CounterAttack);
+            yourChar.Attack = yourChar.Attack + yourChar.Attack;            // Else do the math for the attack, increate your attack by itself
+            hpPush();                                                       // Call the htmlPush function to update the HP in the HTML
+        }
+    };
 
-
+    function seeWhoGo() {
+        
+    }
 
 
 
