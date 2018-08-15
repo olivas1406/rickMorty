@@ -232,10 +232,20 @@ $(document).ready(function(){
     };
 
     function seeWhoGo() {
-        
-    }
-
-
+        if (deleteMe === 1234) {                // If var deleteMe has Rick's code
+            $(".pos11").remove();               // Delete Rick
+            deleteMe = 555;                     // Set deleteMe to 555 (no opponent selected)
+        } else if (deleteMe === 2134) {         // If var deleteMe has Morty's code
+            $(".pos12").remove();               // Delete Morty
+            deleteMe = 555;                     // Set deleteMe to 555 (no opponent selected)
+        } else if (deleteMe === 3124) {         // If var deleteMe has Krombopulos' code
+            $(".pos13").remove();               // Delete Krombopulos
+            deleteMe = 555;                     // Set deleteMe to 555 (no opponent selected)
+        } else if (deleteMe === 4123) {         // If var deleteMe has Lucius' code
+            $(".pos14").remove();               // Delete Lucius
+            deleteMe = 555;                     // Set deleteMe to 555 (no opponent selected)
+        }
+    };
 
     $(".attackButton").on("click", function() {                     // Attack button click event handler
         if ((tracker === true) || (deleteMe = 555)) {               // If var 'tracker' is true or var 'deleteMe' is 555 no opponent has been chosen
@@ -247,10 +257,9 @@ $(document).ready(function(){
         }
     })
 
-
-
-
-
+    $(".resetButton").on("click", function() {
+        location.reload();                      // Reload the page when the reset button is clicked
+    });
 })
 
 
