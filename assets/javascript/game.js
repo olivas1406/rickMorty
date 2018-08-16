@@ -36,7 +36,7 @@ $(document).ready(function(){
         let pushYou = JSON.stringify(yourChar).slice(1, -1).replace(/\"/g, " ");        // Format your characters stats
         let pushThey = JSON.stringify(yourDefend).slice(1, -1).replace(/\"/g, " ");     // Format the Defenders stats
         $(".yourStats").html("Your Stats: <br>" + pushYou);                             // Push your characters stats to the HTML
-        $("defenderStats").html("Enemy Stats: <br>")                                     // Push the Defenders stats to HTML
+        $("defenderStats").html("Enemy Stats: <br>" + pushThey);                        // Push the Defenders stats to HTML
     }
 
     function hpPush() {                             // Function to push HP values to the HTML
