@@ -1,26 +1,25 @@
-
     let rick = {                // Object with Rick's stats
-    HP: 120,
-    Attack: 8,
-    CounterAttack: 10
+        HP: 120,
+        Attack: 8,
+        CounterAttack: 10
     };
     
     let morty = {               // Object with Morty's stats
-    HP: 100,
-    Attack: 11,
-    CounterAttack: 5
+        HP: 100,
+        Attack: 11,
+        CounterAttack: 5
     };
     
     let krom = {                // Object with Krombopulos' stats
-    HP: 150,
-    Attack: 8,
-    CounterAttack: 20
+        HP: 150,
+        Attack: 8,
+        CounterAttack: 20
     };
     
     let lucius = {              // Object with Lucius' stats
-    HP: 180,
-    Attack: 9,
-    CounterAttack: 25
+        HP: 180,
+        Attack: 9,
+        CounterAttack: 25
     };
     
     let move1 = 0;              // Variable to identify which character was moved
