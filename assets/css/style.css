@@ -25,8 +25,12 @@ body {
     border-radius: 12px;
 }
 
+.infoRow {
+    margin: 0 auto 0 auto;
+}
+
 .infoDiv {
-    margin: 1% auto 1% auto;
+    margin: 0 auto 1% auto;
     background: white;
     font-size: 20px;
     /* border: solid 1px darkblue; */
