@@ -218,45 +218,45 @@ $(document).ready(function(){
         if (yourChar.HP <= 1) {                             // If your HP is less than 1, lose condition
             alert("You Suck - you have lost the game");     // Alert this
             location.reload();                              // Reload the page
-            } else if (yourDefend.HP <= 1) {                // Else if your opponent's HP is less than 1, win condition
-                        if (countWin === 2) {               // If var countWin is already at 2 (this is your 3rd win), you win the game
-                            alert("YOU WIN");               // Alert this
-                            location.reload();              // Reload the page
-                        } else if (deleteMe === 555) {      // Else if var deleteMe has been set to 555, no opponent is active
-                            $("infoDiv").html("Enemy Defeated - Choose Another Oppponent"); // Alert this
-                        } else {                                                    // Else
-                            tracker2 = false;                                       // Set var tracker2 to false
-                            $("infoDiv").html("Enemy Defeated");                    // Alert this
-                            countWin++                                              // Increment countWin by 1
-                            yourChar.Attack = yourChar.Attack + yourChar.Attack;    // Increase your character's attack power by itself
-                            hpPush();                                               // Call the htmlPush function to update the HP in the HTML
-                            seeWhoGo();                                             // Call the seeWhoGo function to delete the defeated character
-                        }
-                    } else {                                                        // Else
-                        $(".infoDiv").html("What's going down: You Attacked for " + yourChar.Attack + " damage, you were Counter Attacked for " + yourDefend.CounterAttack);
-                        yourChar.Attack = yourChar.Attack + yourChar.Attack;        // Else do the math for the attack, increase your attack by itself
-                        hpPush();                                                   // Call the htmlPush function to update the HP in the HTML
-                    }
-                }
-
-        function seeWhoGo() {                                                           // Function to delete defeated characters
-            if (deleteMe === 1234) {                                                    // If var deleteMe has Rick's code
-                $(".pos11").remove();                                                   // Delete Rick
-                deleteMe = 555;                                                         // Set deleteMe to 555 (no opponent selected)
-            } else if (deleteMe === 2134) {                                             // If var deleteMe has Morty's code
-                $(".pos12").remove();                                                   // Delete Morty
-                deleteMe = 555;                                                         // Set deleteMe to 555 (no opponent selected)
-            } else if (deleteMe === 3124) {                                             // If var deleteMe has Krombopulos' code
-                $(".pos13").remove();                                                   // Delete Krombopulos
-                deleteMe = 555;                                                         // Set deleteMe to 555 (no opponent selected)
-            } else if (deleteMe === 4123) {                                             // If var deleteMe has Lucius' code
-                $(".pos14").remove();                                                   // Delete Lucius
-               deleteMe = 555;                                                          // Set deleteMe to 555 (no opponent selected)
+        } else if (yourDefend.HP <= 1) {                    // Else if your opponent's HP is less than 1, win condition
+            if (countWin === 2) {               // If var countWin is already at 2 (this is your 3rd win), you win the game
+                alert("YOU WIN");               // Alert this
+                location.reload();              // Reload the page
+            } else if (deleteMe === 555) {      // Else if var deleteMe has been set to 555, no opponent is active
+                $("infoDiv").html("Enemy Defeated - Choose Another Oppponent"); // Alert this
+            } else {                                                    // Else
+                tracker2 = false;                                       // Set var tracker2 to false
+                $("infoDiv").html("Enemy Defeated");                    // Alert this
+                countWin++                                              // Increment countWin by 1
+                yourChar.Attack = yourChar.Attack + yourChar.Attack;    // Increase your character's attack power by itself
+                hpPush();                                               // Call the htmlPush function to update the HP in the HTML
+                seeWhoGo();                                             // Call the seeWhoGo function to delete the defeated character
             }
+        } else {                                                        // Else
+            $(".infoDiv").html("What's going down: You Attacked for " + yourChar.Attack + " damage, you were Counter Attacked for " + yourDefend.CounterAttack);
+            yourChar.Attack = yourChar.Attack + yourChar.Attack;        // Else do the math for the attack, increase your attack by itself
+            hpPush();                                                   // Call the htmlPush function to update the HP in the HTML
         }
+    };
 
-        $(".resetButton").on("click", function() {
-            location.reload();                                                          // Reload the page when the reset button is clicked
-        })
+    function seeWhoGo() {                   // Function to delete defeated characters
+        if (deleteMe === 1234) {            // If var deleteMe has Rick's code
+            $(".pos11").remove();           // Delete Rick
+            deleteMe = 555;                 // Set deleteMe to 555 (no opponent selected)
+        } else if (deleteMe === 2134) {     // If var deleteMe has Morty's code
+            $(".pos12").remove();           // Delete Morty
+            deleteMe = 555;                 // Set deleteMe to 555 (no opponent selected)
+        } else if (deleteMe === 3124) {     // If var deleteMe has Krombopulos' code
+            $(".pos13").remove();           // Delete Krombopulos
+            deleteMe = 555;                 // Set deleteMe to 555 (no opponent selected)
+        } else if (deleteMe === 4123) {     // If var deleteMe has Lucius' code
+            $(".pos14").remove();           // Delete Lucius
+            deleteMe = 555;                  // Set deleteMe to 555 (no opponent selected)
+        }
+    };
+
+    $(".resetButton").on("click", function() {
+        location.reload();                  // Reload the page when the reset button is clicked
+    });
 
 });
