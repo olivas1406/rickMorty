@@ -15,9 +15,8 @@ body {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-family: 'Chicle', cursive;
     font-size: 60px;
-    margin-top: 2%;
     text-align: center;
-    height: 150px;
+    height: 130px;
     margin: auto;
     padding-top: 1.5%;
     background-image: url("../images/headerBg.png");
@@ -39,6 +38,36 @@ body {
     padding-left: 2%;
     padding-right: 2%;
     width: 95%;
+}
+
+.pos1 {
+    text-align: center;
+    display: inline-block;
+    margin: auto 0;
+}
+
+.pos2 {
+    float: left;
+    text-align: center;
+    display: inline-block;
+    margin: auto 0;
+}
+
+.pos3 {
+    text-align: center;
+    display: inline-block;
+    margin: auto 0;
+}
+
+
+.flashleft {
+    text-align: left;
+    padding: 2%;
+}
+
+.flashright {
+    text-align: right;
+    padding: 2%;
 }
 
 .resetButton {
