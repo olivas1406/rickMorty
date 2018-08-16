@@ -10,7 +10,32 @@ body {
     padding: 0;
 }
 
+.titleHere {
+    color: aqua;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-family: 'Chicle', cursive;
+    font-size: 60px;
+    margin-top: 2%;
+    text-align: center;
+    height: 150px;
+    margin: auto;
+    padding-top: 1.5%;
+    background-image: url("../images/headerBg.png");
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    border-radius: 12px;
+}
 
+.infoDiv {
+    margin: 1% auto 1% auto;
+    background: white;
+    font-size: 20px;
+    /* border: solid 1px darkblue; */
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    border-radius: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 95%;
+}
 
 .resetButton {
 
