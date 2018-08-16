@@ -33,14 +33,6 @@
 
 $(document).ready(function(){  
 
-    function statPush() {                               ///////////// IS THIS EVER CALLED???????????????//////
-        var pushYou = JSON.stringify(yourChar).slice(1, -1).replace(/\"/g, " ");
-        var pushThey = JSON.stringify(yourDefend).slice(1, -1).replace(/\"/g, " ");
-        $(".yourStats").html("Your Stats: <br>" + pushYou);
-        $(".defenderStats").html("Enemy Stats <br>" + pushThey);
-    };
-
-
     function hpPush() {
         $(".HP1").html("HP: " + (rick.HP));         // Push Rick's HP to the HTML
         $(".HP2").html("HP: " + (morty.HP));        // Push Morty's HP to the HTML
