@@ -63,7 +63,13 @@ $(document).ready(function(){
     function firstFlash() {
         $(".flasher1").hide();                      // Hide the 'choose your character' flashers
         $(".flasher2").show();                      // Show the 'choose your defender' flashers
-    }
+    };
+
+    function secondFlash() {
+        tracker2 = true;                                                    // Set var tracker2 to true
+        $(".attackButton").show();                                          // Show the attack button
+        $(".flasher2").hide();                                              // Hide the 'choose your defender' flashers
+    };
 
     function rick1() {                                                                 
         if (tracker2 === true) {                    // If var tracker2 is true
@@ -83,9 +89,7 @@ $(document).ready(function(){
         } else if (move1 === 1234) {                                            // Else if this is the second time Rick has been clicked
             alert("I'm Pickle Rick!!!");                                        // Alert this
         } else if (move1 === 2134 || 3124 || 4123) {                            // Else If Rick is picked as defender
-            tracker2 = true;                                                    // Set var tracker2 to true
-            $(".attackButton").show();                                          // Show the attack button
-            $(".flasher2").hide();                                              // Hide the 'choose your defender' flashers
+            secondFlash();
             $(".defender").append($(".pos11"));                                 // Move Rick down on the page
             $(".pos11").css({                                                   // CSS changes to Rick
                 "background-color": "red",
@@ -117,9 +121,7 @@ $(document).ready(function(){
         } else if (move1 === 2134) {                                            // Else if this is the second time Morty has been clicked
             alert("Nobody exists on purpose, nobody belongs anywhere, we are all going to die..."); // Alert this
         } else if (move1 === 1234 || 3124 || 4123) {                            // Else If Morty is picked as defender
-            tracker2 = true;                                                    // Set var tracker2 to true
-            $(".attackButton").show();                                          // Show the attack button
-            $(".flasher2").hide();                                              // Hide the 'choose your defender' flashers
+            secondFlash();
             $(".defender").append($(".pos12"));                                 // Move Morty down on the page
             $(".pos12").css({                                                   // Make these CSS changes to Morty
                 "background-color": "red",
@@ -151,10 +153,8 @@ $(document).ready(function(){
         tracker = true;                                                         // Set var tracker to true (no opponent has been selected)
         } else if (move1 === 3124) {                                            // Else if this is the second time Krombopulos has been clicked
             alert("Here I go killing again");                                   // Alert this
-        } else if (move1 === 1234 || 2134 || 4123) {                            // Else if someone else is in postion 1, move Krombopulos from
-            tracker2 = true;                                                    // Set var tracker2 to true
-            $(".attackButton").show();                                          // Show the attack button
-            $(".flasher2").hide();                                              // Hide the 'choose your defender' flashers
+        } else if (move1 === 1234 || 2134 || 4123) {                            // Else if someone else is in postion 1, move Krombopulos
+            secondFlash();
             $(".defender").append($(".pos13"));                                 // Move Krombopulos down on the page
             $(".pos13").css({                                                   // Make these CSS changes to Krombopulos
                 "background-color": "red",
@@ -186,10 +186,8 @@ $(document).ready(function(){
         tracker = true;                                                         // Set var tracker to true (no opponent has been selected)
         } else if (move1 === 4123) {                                            // Else if this is the second time Lucius has been clicked
             alert("I just want to go back to hell, where everyone thinks I'm smart and funny"); // Alert this
-        } else if (move1 === 1234 || 2134 || 3124) {                           // Else if someone else is in postion 1, move Lucius from 
-            tracker2 = true;                                                    // Set var tracker2 to true
-            $(".attackButton").show();                                          // Show the attack button
-            $(".flasher2").hide();                                              // Hide the 'choose your defender' flashers
+        } else if (move1 === 1234 || 2134 || 3124) {                           // Else if someone else is in postion 1, move Lucius
+            secondFlash();
             $(".defender").append($(".pos14"));                                 // Move Lucius down on the page
             $(".pos14").css({                                                   // Make these CSS changes to Lucius
                 "background-color": "red",
