@@ -69,7 +69,8 @@ $(document).ready(function(){
         $(".flasher2").show();                      // Show the 'choose your defender' flashers
         $(".pos11").css({                           // Make these CSS changes to Rick
             "background-color": "lightblue",
-            "color": "white"
+            "color": "white",
+            "border-radius": "8px"
         });
         $(".chooseDefend").append($(".pos12, .pos13, .pos14"));                 // Move the other three characters down on the page
         $(".pos12, .pos13, .pos14").addClass("pos2").removeClass("pos1");       // Change div class pos1 to pos2 for the three that were moved
@@ -85,7 +86,8 @@ $(document).ready(function(){
             $(".pos11").css({                                                   // CSS changes to Rick
                 "background-color": "red",
                 "color": "yellow",
-                "border-color": "white"
+                "border-color": "white",
+                "border-radius": "8px"
             });
         }
             yourDefend = rick;      // Set var yourDefend to  Rick's stats
@@ -102,7 +104,8 @@ $(document).ready(function(){
         $(".flasher2").show();                      // Show the 'choose your defender' flashers
         $(".pos12").css({                           // Make these CSS changes to Morty
             "background-color": "lightblue",
-            "color": "white"
+            "color": "white",
+            "border-radius": "8px"
         }); 
         $(".chooseDefend").append($(".pos11, .pos13, .pos14"));                 // Move the other three characters down on the page
         $(".pos11, .pos13, .pos14").addClass("pos2").removeClass("pos1");       // Change div class pos1 to pos2 for the three that were moved
@@ -118,7 +121,8 @@ $(document).ready(function(){
             $(".pos12").css({                                                   // Make these CSS changes to Morty
                 "background-color": "red",
                 "color": "yellow",
-                "border-color": "white"
+                "border-color": "white",
+                "border-radius": "8px"
             });
         }
             yourDefend = morty;     // Set var yourDefend to Morty's stats
@@ -135,7 +139,8 @@ $(document).ready(function(){
         $(".flasher2").show();                      // Show the 'choose your defender' flashers
         $(".pos13").css({                           // Make these CSS changes to Krombopulos
             "background-color": "lightblue",
-            "color": "white"
+            "color": "white",
+            "border-radius": "8px"
         });
         $(".chooseDefend").append($(".pos11, .pos12, .pos14"));                 // Move the other three characters down on the page
         $(".pos11, .pos12, .pos14").addClass("pos2").removeClass("pos1");       // Change div class pos1 to pos2 for the three that were moved
@@ -152,7 +157,8 @@ $(document).ready(function(){
             $(".pos13").css({                                                   // Make these CSS changes to Krombopulos
                 "background-color": "red",
                 "color": "yellow",
-                "border-color": "white"
+                "border-color": "white",
+                "border-radius": "8px"
             });
         }
             yourDefend = krom;      // Set var yourDefend to Krombopulos' stats
@@ -169,7 +175,8 @@ $(document).ready(function(){
         $(".flasher2").show();                      // Show the 'choose your defender' flashers
         $(".pos14").css({                           // Make these CSS changes to Lucius
             "background-color": "lightblue",
-            "color": "white"
+            "color": "white",
+            "border-radius": "8px"
         });
         $(".chooseDefend").append($(".pos11, .pos12, .pos13"));                 // Move the other three characters down on the page 
         $(".pos11, .pos12, .pos13").addClass("pos2").removeClass("pos1");       // Change div class pos1 to pos2 for the three that were moved
@@ -186,7 +193,8 @@ $(document).ready(function(){
             $(".pos14").css({                                                   // Make these CSS changes to Lucius
                 "background-color": "red",
                 "color": "yellow",
-                "border-color": "white"
+                "border-color": "white",
+                "border-radius": "8px"
             });
         }
         yourDefend = lucius;        // Set var yourDefend to Lucius' stats

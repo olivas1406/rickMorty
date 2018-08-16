@@ -47,6 +47,7 @@ body {
 .charImg {
     border-radius: 10px;
     background-color: white;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 
 .pos1 {
@@ -83,21 +84,17 @@ body {
 .resetButton {
     cursor: pointer;
     padding: 2%;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    
 }
 
 .attackButton {
     cursor: pointer;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 
-.yourStats {
 
-}
 
-.infoDiv {
 
-}
 
-.defenderStats {
-
-}
 
