@@ -70,13 +70,13 @@ $(document).ready(function(){
     });
 
     function rick1() {                                                                 
-        if (tracker2 === true) {                                                // If var tracker2 is true
-            alert("One Enemy At A Time!");                                      // There is already an enemy selected
-        } else if (move1 === 0) {                                               // Else If var move1 is 0
-        move1 = 1234;                                                           // Set var move1 to 1234
-        $(".flasher1").hide();                                                  // Hide the 'choose your character' flashers
-        $(".flasher2").show();                                                  // Show the 'choose your defender' flashers
-        $(".pos11").css({                                                       // Make these CSS changes to Rick
+        if (tracker2 === true) {                    // If var tracker2 is true
+            alert("One Enemy At A Time!");          // There is already an enemy selected
+        } else if (move1 === 0) {                   // Else If var move1 is 0
+        move1 = 1234;                               // Set var move1 to 1234
+        $(".flasher1").hide();                      // Hide the 'choose your character' flashers
+        $(".flasher2").show();                      // Show the 'choose your defender' flashers
+        $(".pos11").css({                           // Make these CSS changes to Rick
             "background-color": "lightblue",
             "color": "white"
         });
@@ -97,19 +97,19 @@ $(document).ready(function(){
                 "border-color": "white"
             });
         }
-            yourDefend = rick;                                                  // Set var yourDefend to  Rick's stats
-            deleteMe = 1234                                                     // Set Rick as the character to delete if defeated
-            tracker = false;                                                    // An oppponent has been selected
+            yourDefend = rick;      // Set var yourDefend to  Rick's stats
+            deleteMe = 1234         // Set Rick as the character to delete if defeated
+            tracker = false;        // An oppponent has been selected
     };
     
     function morty1() {
-        if (tracker2 === true) {                                                // If var tracker2 is true
-            alert("One Enemy At A Time!");                                      // There is already an enemy selected
-        } else if (move1 === 0) {                                               // Else if var move1 is 0
-        move1 = 2134;                                                           // Set var move1 to 2134
-        $(".flasher1").hide();                                                  // Hide the 'choose your character' flashers
-        $(".flasher2").show();                                                  // Show the 'choose your defender' flashers
-        $(".pos12").css({                                                       // Make these CSS changes to Morty
+        if (tracker2 === true) {                    // If var tracker2 is true
+            alert("One Enemy At A Time!");          // There is already an enemy selected
+        } else if (move1 === 0) {                   // Else if var move1 is 0
+        move1 = 2134;                               // Set var move1 to 2134
+        $(".flasher1").hide();                      // Hide the 'choose your character' flashers
+        $(".flasher2").show();                      // Show the 'choose your defender' flashers
+        $(".pos12").css({                           // Make these CSS changes to Morty
             "background-color": "lightblue",
             "color": "white"
         }); 
@@ -130,9 +130,9 @@ $(document).ready(function(){
                 "border-color": "white"
             });
         }
-            yourDefend = morty;                                                 // Set var yourDefend to Morty's stats
-            deleteMe = 2134                                                     // Set Morty as the character to delete if defeated
-            tracker = false;                                                    // An opponent has been selected
+            yourDefend = morty;     // Set var yourDefend to Morty's stats
+            deleteMe = 2134         // Set Morty as the character to delete if defeated
+            tracker = false;        // An opponent has been selected
     };
     
     function krom1() {
@@ -146,74 +146,72 @@ $(document).ready(function(){
             "background-color": "lightblue",
             "color": "white"
         });
-        $(".chooseDefend").append($(".pos11, .pos12, .pos14"));                         // Move the other three characters down on the page
-        $(".pos11, .pos12, .pos14").addClass("pos2").removeClass("pos1");               // Change div class pos1 to pos2 for the three that were moved
-        move1 = 3124;                                                                   // Set var move1 to alert if Krombopulos is clicked again
-        yourChar = krom;                                                                // Set var yourChar to Krombopulos' stats
-        tracker = true;                                                                 // Set var tracker to true (no opponent has been selected)
-        } else if (move1 === 3124) {                                                    // Else if this is the second time Krombopulos has been clicked
-            alert("Here I go killing again");                                           // Alert this
-        } else if ((move1 === 1234) || (move1 === 2134) || (move1 === 4123)) {          // Else if someone else is in postion 1, move Krombopulos from
-            tracker2 = true;                                                            // Set var tracker2 to true
-            $(".attackButton").show();                                                  // Show the attack button
-            $(".flasher2").hide();                                                      // Hide the 'choose your defender' flashers
-            $(".defender").append($(".pos13"));                                         // Move Krombopulos down on the page
-            $(".pos13").css({                                                           // CSS changes to Krombopulos
+        $(".chooseDefend").append($(".pos11, .pos12, .pos14"));                 // Move the other three characters down on the page
+        $(".pos11, .pos12, .pos14").addClass("pos2").removeClass("pos1");       // Change div class pos1 to pos2 for the three that were moved
+        move1 = 3124;                                                           // Set var move1 to alert if Krombopulos is clicked again
+        yourChar = krom;                                                        // Set var yourChar to Krombopulos' stats
+        tracker = true;                                                         // Set var tracker to true (no opponent has been selected)
+        } else if (move1 === 3124) {                                            // Else if this is the second time Krombopulos has been clicked
+            alert("Here I go killing again");                                   // Alert this
+        } else if ((move1 === 1234) || (move1 === 2134) || (move1 === 4123)) {  // Else if someone else is in postion 1, move Krombopulos from
+            tracker2 = true;                                                    // Set var tracker2 to true
+            $(".attackButton").show();                                          // Show the attack button
+            $(".flasher2").hide();                                              // Hide the 'choose your defender' flashers
+            $(".defender").append($(".pos13"));                                 // Move Krombopulos down on the page
+            $(".pos13").css({                                                   // Make these CSS changes to Krombopulos
                 "background-color": "red",
                 "color": "yellow",
                 "border-color": "white"
             });
-            // statPush();
         }
-            yourDefend = krom;                                                          // Set var yourDefend to Krombopulos' stats
-            deleteMe = 3124;                                                            // Set Krombopulos as the character to delete if defeated
-            tracker = false;                                                            // An opponent has been selected
+            yourDefend = krom;                                                  // Set var yourDefend to Krombopulos' stats
+            deleteMe = 3124;                                                    // Set Krombopulos as the character to delete if defeated
+            tracker = false;                                                    // An opponent has been selected
     };
     
     function luc1() {
-        if (tracker2 === true) {                                                        // If var tracker2 is true
-            alert("One Enemy At A Time!");                                              // There is already an enemy selected
-        } else if (move1 === 0) {                                                       // Else If var move1 is 0
-        move1 = 4123;                                                                   // Set var move1 to 4123
-        $(".flasher1").hide();                                                          // Hide the 'choose your character' flashers 
-        $(".flasher2").show();                                                          // Show the 'choose your defender' flashers
-        $(".pos14").css({                                                               // CSS changes to Lucius
+        if (tracker2 === true) {                                                // If var tracker2 is true
+            alert("One Enemy At A Time!");                                      // There is already an enemy selected
+        } else if (move1 === 0) {                                               // Else If var move1 is 0
+        move1 = 4123;                                                           // Set var move1 to 4123
+        $(".flasher1").hide();                                                  // Hide the 'choose your character' flashers 
+        $(".flasher2").show();                                                  // Show the 'choose your defender' flashers
+        $(".pos14").css({                                                       // Make these CSS changes to Lucius
             "background-color": "lightblue",
             "color": "white"
         });
-        $(".chooseDefend").append($(".pos11, .pos12, .pos13"));                         // Move the other three characters down on the page 
-        $(".pos11, .pos12, .pos13").addClass("pos2").removeClass("pos1");               // Change div class pos1 to pos2 for the three that were moved
-        move1 = 4123;                                                                   // Set var move1 to alert if Lucius is clicked again
-        yourChar = lucius;                                                              // Set var yourChar to Lucius' stats
-        tracker = true;                                                                 // Set var tracker to true (no opponent has been selected)
-        } else if (move1 === 4123) {                                                    // Else if this is the second time Lucius has been clicked
+        $(".chooseDefend").append($(".pos11, .pos12, .pos13"));                 // Move the other three characters down on the page 
+        $(".pos11, .pos12, .pos13").addClass("pos2").removeClass("pos1");       // Change div class pos1 to pos2 for the three that were moved
+        move1 = 4123;                                                           // Set var move1 to alert if Lucius is clicked again
+        yourChar = lucius;                                                      // Set var yourChar to Lucius' stats
+        tracker = true;                                                         // Set var tracker to true (no opponent has been selected)
+        } else if (move1 === 4123) {                                            // Else if this is the second time Lucius has been clicked
             alert("I just want to go back to hell, where everyone thinks I'm smart and funny"); // Alert this
-        } else if ((move1 === 1234) || (move1 === 2134) || (move1 === 3124)) {          // Else if someone else is in postion 1, move Lucius from 
-            tracker2 = true;                                                            // Set var tracker2 to true
-            $(".attackButton").show();                                                  // Show the attack button
-            $(".flasher2").hide();                                                      // Hide the 'choose your defender' flashers
-            $(".defender").append($(".pos14"));                                         // Move Lucius down on the page
-            $(".pos14").css({                                                           // CSS changes to Lucius
+        } else if ((move1 === 1234) || (move1 === 2134) || (move1 === 3124)) {  // Else if someone else is in postion 1, move Lucius from 
+            tracker2 = true;                                                    // Set var tracker2 to true
+            $(".attackButton").show();                                          // Show the attack button
+            $(".flasher2").hide();                                              // Hide the 'choose your defender' flashers
+            $(".defender").append($(".pos14"));                                 // Move Lucius down on the page
+            $(".pos14").css({                                                   // Make these CSS changes to Lucius
                 "background-color": "red",
                 "color": "yellow",
                 "border-color": "white"
             });
-            // statPush();
         }
-        yourDefend = lucius;                                                            // Set var yourDefend to Lucius' stats
-        deleteMe = 4123;                                                                // Set Lucius as the character to delete if defeated
-        tracker = false;                                                                // An opponent has been selected
+        yourDefend = lucius;                                                    // Set var yourDefend to Lucius' stats
+        deleteMe = 4123;                                                        // Set Lucius as the character to delete if defeated
+        tracker = false;                                                        // An opponent has been selected
     };
     
-    $(".attackButton").on("click", function() {                                         // Attack button click event handler
+    $(".attackButton").on("click", function() {                                 // Attack button click event handler
         // statPush();
-        if ((tracker === true) || (deleteMe === 555)) {                                 // If var tracker is true or var deleteMe is 555
+        if ((tracker === true) || (deleteMe === 555)) {                         // If var tracker is true or var deleteMe is 555
             $("infoDiv").html(" Choose an opponent first - are you attacking yourself?!?"); // No opponent has been chosen
         }
-        else if (tracker === false) {                                                   // Else If var tracker is false
-            yourDefend.HP = yourDefend.HP - yourChar.Attack                             // Subtract your attack power from the defender's HP
-            yourChar.HP = yourChar.HP - yourDefend.CounterAttack                        // Subtract the defender's attack power from your HP
-            attackerFu();                                                               // Call the attackerFu function
+        else if (tracker === false) {                                           // Else If var tracker is false
+            yourDefend.HP = yourDefend.HP - yourChar.Attack                     // Subtract your attack power from the defender's HP
+            yourChar.HP = yourChar.HP - yourDefend.CounterAttack                // Subtract the defender's attack power from your HP
+            attackerFu();                                                       // Call the attackerFu function
             }
     });
 
