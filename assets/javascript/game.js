@@ -136,13 +136,13 @@ $(document).ready(function(){
     };
     
     function krom1() {
-        if (tracker2 === true) {                                                // If var tracker2 is true
-            alert("One Enemy At A Time!");                                      // There is already an enemy selected
-        } else if (move1 === 0) {                                               // Else If var move1 is 0
-        move1 = 3124;                                                           // Set var move1 to 3124
-        $(".flasher1").hide();                                                  // Hide the 'choose your character' flashers
-        $(".flasher2").show();                                                  // Show the 'choose your defender' flashers
-        $(".pos13").css({                                                       // Make these CSS changes to Krombopulos
+        if (tracker2 === true) {                    // If var tracker2 is true
+            alert("One Enemy At A Time!");          // There is already an enemy selected
+        } else if (move1 === 0) {                   // Else If var move1 is 0
+        move1 = 3124;                               // Set var move1 to 3124
+        $(".flasher1").hide();                      // Hide the 'choose your character' flashers
+        $(".flasher2").show();                      // Show the 'choose your defender' flashers
+        $(".pos13").css({                           // Make these CSS changes to Krombopulos
             "background-color": "lightblue",
             "color": "white"
         });
@@ -164,19 +164,19 @@ $(document).ready(function(){
                 "border-color": "white"
             });
         }
-            yourDefend = krom;                                                  // Set var yourDefend to Krombopulos' stats
-            deleteMe = 3124;                                                    // Set Krombopulos as the character to delete if defeated
-            tracker = false;                                                    // An opponent has been selected
+            yourDefend = krom;      // Set var yourDefend to Krombopulos' stats
+            deleteMe = 3124;        // Set Krombopulos as the character to delete if defeated
+            tracker = false;        // An opponent has been selected
     };
     
     function luc1() {
-        if (tracker2 === true) {                                                // If var tracker2 is true
-            alert("One Enemy At A Time!");                                      // There is already an enemy selected
-        } else if (move1 === 0) {                                               // Else If var move1 is 0
-        move1 = 4123;                                                           // Set var move1 to 4123
-        $(".flasher1").hide();                                                  // Hide the 'choose your character' flashers 
-        $(".flasher2").show();                                                  // Show the 'choose your defender' flashers
-        $(".pos14").css({                                                       // Make these CSS changes to Lucius
+        if (tracker2 === true) {                    // If var tracker2 is true
+            alert("One Enemy At A Time!");          // There is already an enemy selected
+        } else if (move1 === 0) {                   // Else If var move1 is 0
+        move1 = 4123;                               // Set var move1 to 4123
+        $(".flasher1").hide();                      // Hide the 'choose your character' flashers 
+        $(".flasher2").show();                      // Show the 'choose your defender' flashers
+        $(".pos14").css({                           // Make these CSS changes to Lucius
             "background-color": "lightblue",
             "color": "white"
         });
@@ -198,45 +198,44 @@ $(document).ready(function(){
                 "border-color": "white"
             });
         }
-        yourDefend = lucius;                                                    // Set var yourDefend to Lucius' stats
-        deleteMe = 4123;                                                        // Set Lucius as the character to delete if defeated
-        tracker = false;                                                        // An opponent has been selected
+        yourDefend = lucius;        // Set var yourDefend to Lucius' stats
+        deleteMe = 4123;            // Set Lucius as the character to delete if defeated
+        tracker = false;            // An opponent has been selected
     };
     
-    $(".attackButton").on("click", function() {                                 // Attack button click event handler
-        // statPush();
-        if ((tracker === true) || (deleteMe === 555)) {                         // If var tracker is true or var deleteMe is 555
+    $(".attackButton").on("click", function() {                     // Attack button click event handler
+        if ((tracker === true) || (deleteMe === 555)) {             // If var tracker is true or var deleteMe is 555
             $("infoDiv").html(" Choose an opponent first - are you attacking yourself?!?"); // No opponent has been chosen
         }
-        else if (tracker === false) {                                           // Else If var tracker is false
-            yourDefend.HP = yourDefend.HP - yourChar.Attack                     // Subtract your attack power from the defender's HP
-            yourChar.HP = yourChar.HP - yourDefend.CounterAttack                // Subtract the defender's attack power from your HP
-            attackerFu();                                                       // Call the attackerFu function
+        else if (tracker === false) {                               // Else If var tracker is false
+            yourDefend.HP = yourDefend.HP - yourChar.Attack         // Subtract your attack power from the defender's HP
+            yourChar.HP = yourChar.HP - yourDefend.CounterAttack    // Subtract the defender's attack power from your HP
+            attackerFu();                                           // Call the attackerFu function
             }
     });
 
-    function attackerFu() {                                                             // Function for what happens when you attack
-        if (yourChar.HP <= 1) {                                                         // If your HP is less than 1, lose condition
-            alert("You Suck - you have lost the game");                                 // Alert this
-            location.reload();                                                          // Reload the page
-            } else if (yourDefend.HP <= 1) {                                            // Else if your opponent's HP is less than 1, win condition
-                        if (countWin === 2) {                                           // If var countWin is already at 2 (this is your 3rd win), you win the game
-                            alert("YOU WIN");                                           // Alert this
-                            location.reload();                                          // Reload the page
-                        } else if (deleteMe === 555) {                                  // Else if var deleteMe has been set to 555, no opponent is active
+    function attackerFu() {                                 // Function for what happens when you attack
+        if (yourChar.HP <= 1) {                             // If your HP is less than 1, lose condition
+            alert("You Suck - you have lost the game");     // Alert this
+            location.reload();                              // Reload the page
+            } else if (yourDefend.HP <= 1) {                // Else if your opponent's HP is less than 1, win condition
+                        if (countWin === 2) {               // If var countWin is already at 2 (this is your 3rd win), you win the game
+                            alert("YOU WIN");               // Alert this
+                            location.reload();              // Reload the page
+                        } else if (deleteMe === 555) {      // Else if var deleteMe has been set to 555, no opponent is active
                             $("infoDiv").html("Enemy Defeated - Choose Another Oppponent"); // Alert this
-                        } else {                                                        // Else
-                            tracker2 = false;                                           // Set var tracker2 to false
-                            $("infoDiv").html("Enemy Defeated");                        // Alert this
-                            countWin++                                                  // Increment countWin by 1
-                            yourChar.Attack = yourChar.Attack + yourChar.Attack;        // Increase your character's attack power by itself
-                            hpPush();                                                   // Call the htmlPush function to update the HP in the HTML
-                            seeWhoGo();                                                 // Call the seeWhoGo function to delete the defeated character
+                        } else {                                                    // Else
+                            tracker2 = false;                                       // Set var tracker2 to false
+                            $("infoDiv").html("Enemy Defeated");                    // Alert this
+                            countWin++                                              // Increment countWin by 1
+                            yourChar.Attack = yourChar.Attack + yourChar.Attack;    // Increase your character's attack power by itself
+                            hpPush();                                               // Call the htmlPush function to update the HP in the HTML
+                            seeWhoGo();                                             // Call the seeWhoGo function to delete the defeated character
                         }
-                    } else {                                                            // Else
+                    } else {                                                        // Else
                         $(".infoDiv").html("What's going down: You Attacked for " + yourChar.Attack + " damage, you were Counter Attacked for " + yourDefend.CounterAttack);
-                        yourChar.Attack = yourChar.Attack + yourChar.Attack;            // Else do the math for the attack, increase your attack by itself
-                        hpPush();                                                       // Call the htmlPush function to update the HP in the HTML
+                        yourChar.Attack = yourChar.Attack + yourChar.Attack;        // Else do the math for the attack, increase your attack by itself
+                        hpPush();                                                   // Call the htmlPush function to update the HP in the HTML
                     }
                 }
 
