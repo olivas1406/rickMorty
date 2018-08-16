@@ -70,81 +70,79 @@ $(document).ready(function(){
     });
 
     function rick1() {                                                                 
-        if (tracker2 === true) {                                                        // If var tracker2 is true
-            alert("One Enemy At A Time!");                                              // There is already an enemy selected
-        } else if (move1 === 0) {                                                       // Else If var move1 is 0
-        move1 = 1234;                                                                   // Set var move1 to 1234
-        $(".flasher1").hide();                                                          // Hide the 'choose your character' flashers
-        $(".flasher2").show();                                                          // Show the 'choose your defender' flashers
-        $(".pos11").css({                                                               // CSS changes to Rick
+        if (tracker2 === true) {                                                // If var tracker2 is true
+            alert("One Enemy At A Time!");                                      // There is already an enemy selected
+        } else if (move1 === 0) {                                               // Else If var move1 is 0
+        move1 = 1234;                                                           // Set var move1 to 1234
+        $(".flasher1").hide();                                                  // Hide the 'choose your character' flashers
+        $(".flasher2").show();                                                  // Show the 'choose your defender' flashers
+        $(".pos11").css({                                                       // Make these CSS changes to Rick
             "background-color": "lightblue",
             "color": "white"
         });
-        $(".chooseDefend").append($(".pos12, .pos13, .pos14"));                         // Move the other three characters down on the page
-        $(".pos12, .pos13, .pos14").addClass("pos2").removeClass("pos1");               // Change div class pos1 to pos2 for the three that were moved
-          yourChar = rick;                                                              // Set var yourChar to Rick's stats
-          tracker = true;                                                               // Set var tracker to true (no opponent has been selected)
-        } else if (move1 === 1234) {                                                    // Else if this is the second time Rick has been clicked
-            alert("I'm Pickle Rick!!!");                                                // Alert this
-        } else if ((move1 === 2134) || (move1 === 3124) || (move1 === 4123)) {          // Else If Rick is picked as defender
-            tracker2 = true;                                                            // Set var tracker2 to true
-            $(".attackButton").show();                                                  // Show the attack button
-            $(".flasher2").hide();                                                      // Hide the 'choose your defender' flashers
-            $(".defender").append($(".pos11"));                                         // Move Rick down on the page
-            $(".pos11").css({                                                           // CSS changes to Rick
+        $(".chooseDefend").append($(".pos12, .pos13, .pos14"));                 // Move the other three characters down on the page
+        $(".pos12, .pos13, .pos14").addClass("pos2").removeClass("pos1");       // Change div class pos1 to pos2 for the three that were moved
+          yourChar = rick;                                                      // Set var yourChar to Rick's stats
+          tracker = true;                                                       // Set var tracker to true (no opponent has been selected)
+        } else if (move1 === 1234) {                                            // Else if this is the second time Rick has been clicked
+            alert("I'm Pickle Rick!!!");                                        // Alert this
+        } else if ((move1 === 2134) || (move1 === 3124) || (move1 === 4123)) {  // Else If Rick is picked as defender
+            tracker2 = true;                                                    // Set var tracker2 to true
+            $(".attackButton").show();                                          // Show the attack button
+            $(".flasher2").hide();                                              // Hide the 'choose your defender' flashers
+            $(".defender").append($(".pos11"));                                 // Move Rick down on the page
+            $(".pos11").css({                                                   // CSS changes to Rick
                 "background-color": "red",
                 "color": "yellow",
                 "border-color": "white"
             });
-            // statPush();
-            }
-            yourDefend = rick;                                                          // Set var yourDefend to  Rick's stats
-            deleteMe = 1234                                                             // Set Rick as the character to delete if defeated
-            tracker = false;                                                            // An oppponent has been selected
-        };
+        }
+            yourDefend = rick;                                                  // Set var yourDefend to  Rick's stats
+            deleteMe = 1234                                                     // Set Rick as the character to delete if defeated
+            tracker = false;                                                    // An oppponent has been selected
+    };
     
     function morty1() {
-        if (tracker2 === true) {                                                        // If var tracker2 is true
-            alert("One Enemy At A Time!");                                              // There is already an enemy selected
-        } else if (move1 === 0) {                                                       // Else if var move1 is 0
-        move1 = 2134;                                                                   // Set var move1 to 2134
-        $(".flasher1").hide();                                                          // Hide the 'choose your character' flashers
-        $(".flasher2").show();                                                          // Show the 'choose your defender' flashers
-        $(".pos12").css({                                                               // CSS changes to Morty
+        if (tracker2 === true) {                                                // If var tracker2 is true
+            alert("One Enemy At A Time!");                                      // There is already an enemy selected
+        } else if (move1 === 0) {                                               // Else if var move1 is 0
+        move1 = 2134;                                                           // Set var move1 to 2134
+        $(".flasher1").hide();                                                  // Hide the 'choose your character' flashers
+        $(".flasher2").show();                                                  // Show the 'choose your defender' flashers
+        $(".pos12").css({                                                       // Make these CSS changes to Morty
             "background-color": "lightblue",
             "color": "white"
         }); 
-        $(".chooseDefend").append($(".pos11, .pos13, .pos14"));                         // Move the other three characters down on the page
-        $(".pos11, .pos13, .pos14").addClass("pos2").removeClass("pos1");               // Change div class pos1 to pos2 for the three that were moved
-        yourChar = morty;                                                               // Set var yourChar to Morty's stats
-        tracker = true;                                                                 // Set var tracker to true (no opponent has been selected)
-        } else if (move1 === 2134) {                                                    // Else if this is the second time Morty has been clicked
+        $(".chooseDefend").append($(".pos11, .pos13, .pos14"));                 // Move the other three characters down on the page
+        $(".pos11, .pos13, .pos14").addClass("pos2").removeClass("pos1");       // Change div class pos1 to pos2 for the three that were moved
+        yourChar = morty;                                                       // Set var yourChar to Morty's stats
+        tracker = true;                                                         // Set var tracker to true (no opponent has been selected)
+        } else if (move1 === 2134) {                                            // Else if this is the second time Morty has been clicked
             alert("Nobody exists on purpose, nobody belongs anywhere, we are all going to die..."); // Alert this
-        } else if ((move1 === 1234) || (move1 === 3124) || (move1 === 4123)){           // Else If Morty is picked as defender
-            tracker2 = true;                                                            // Set var tracker2 to true
-            $(".attackButton").show();                                                  // Show the attack button
-            $(".flasher2").hide();                                                      // Hide the 'choose your defender' flashers
-            $(".defender").append($(".pos12"));                                         // Move Morty down on the page
-            $(".pos12").css({                                                           // CSS changes to Morty
+        } else if ((move1 === 1234) || (move1 === 3124) || (move1 === 4123)){   // Else If Morty is picked as defender
+            tracker2 = true;                                                    // Set var tracker2 to true
+            $(".attackButton").show();                                          // Show the attack button
+            $(".flasher2").hide();                                              // Hide the 'choose your defender' flashers
+            $(".defender").append($(".pos12"));                                 // Move Morty down on the page
+            $(".pos12").css({                                                   // Make these CSS changes to Morty
                 "background-color": "red",
                 "color": "yellow",
                 "border-color": "white"
             });
-            // statPush();
         }
-            yourDefend = morty;                                                         // Set var yourDefend to Morty's stats
-            deleteMe = 2134                                                             // Set Morty as the character to delete if defeated
-            tracker = false;                                                            // An opponent has been selected
-        };
+            yourDefend = morty;                                                 // Set var yourDefend to Morty's stats
+            deleteMe = 2134                                                     // Set Morty as the character to delete if defeated
+            tracker = false;                                                    // An opponent has been selected
+    };
     
     function krom1() {
-        if (tracker2 === true) {                                                        // If var tracker2 is true
-            alert("One Enemy At A Time!");                                              // There is already an enemy selected
-        } else if (move1 === 0) {                                                       // Else If var move1 is 0
-        move1 = 3124;                                                                   // Set var move1 to 3124
-        $(".flasher1").hide();                                                          // Hide the 'choose your character' flashers
-        $(".flasher2").show();                                                          // Show the 'choose your defender' flashers
-        $(".pos13").css({                                                               // CSS changes to Krombopulos
+        if (tracker2 === true) {                                                // If var tracker2 is true
+            alert("One Enemy At A Time!");                                      // There is already an enemy selected
+        } else if (move1 === 0) {                                               // Else If var move1 is 0
+        move1 = 3124;                                                           // Set var move1 to 3124
+        $(".flasher1").hide();                                                  // Hide the 'choose your character' flashers
+        $(".flasher2").show();                                                  // Show the 'choose your defender' flashers
+        $(".pos13").css({                                                       // Make these CSS changes to Krombopulos
             "background-color": "lightblue",
             "color": "white"
         });
