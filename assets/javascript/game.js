@@ -1,34 +1,34 @@
-    let rick = {                // Object with Rick's stats
-        HP: 120,
-        Attack: 8,
-        CounterAttack: 10
-    };
+let rick = {                // Object with Rick's stats
+    HP: 120,
+    Attack: 8,
+    CounterAttack: 10
+};
     
-    let morty = {               // Object with Morty's stats
-        HP: 100,
-        Attack: 11,
-        CounterAttack: 5
-    };
+let morty = {               // Object with Morty's stats
+    HP: 100,
+    Attack: 11,
+    CounterAttack: 5
+};
     
-    let krom = {                // Object with Krombopulos' stats
-        HP: 150,
-        Attack: 8,
-        CounterAttack: 20
-    };
+let krom = {                // Object with Krombopulos' stats
+    HP: 150,
+    Attack: 8,
+    CounterAttack: 20
+};
     
-    let lucius = {              // Object with Lucius' stats
-        HP: 180,
-        Attack: 9,
-        CounterAttack: 25
-    };
+let lucius = {              // Object with Lucius' stats
+    HP: 180,
+    Attack: 9,
+    CounterAttack: 25
+};
     
-    let move1 = 0;              // Variable to identify which character was moved
-    let yourChar = {};          // Object to hold Your Character's stats
-    let yourDefend = {};        // Object to hold the current Defender's stats
-    let deleteMe = 0;           // Variable to identify which character to delete after they have been defeated
-    let tracker = false;        // Variable to determine if a Defender has been selected
-    let tracker2 = false;       // Variable to determine if the defender has been defeated
-    let countWin = 0;           // Variable to determine how many opponents you've defeated
+let move1 = 0;              // Variable to identify which character was moved
+let yourChar = {};          // Object to hold Your Character's stats
+let yourDefend = {};        // Object to hold the current Defender's stats
+let deleteMe = 0;           // Variable to identify which character to delete after they have been defeated
+let tracker = false;        // Variable to determine if a Defender has been selected
+let tracker2 = false;       // Variable to determine if the defender has been defeated
+let countWin = 0;           // Variable to determine how many opponents you've defeated
 
 $(document).ready(function(){  
 
@@ -60,13 +60,17 @@ $(document).ready(function(){
         luc1();                                     // Call the luc1 function 
     });
 
+    function firstFlash() {
+        $(".flasher1").hide();                      // Hide the 'choose your character' flashers
+        $(".flasher2").show();                      // Show the 'choose your defender' flashers
+    }
+
     function rick1() {                                                                 
         if (tracker2 === true) {                    // If var tracker2 is true
             alert("One Enemy At A Time!");          // There is already an enemy selected
         } else if (move1 === 0) {                   // Else If var move1 is 0
-        move1 = 1234;                               // Set var move1 to 1234
-        $(".flasher1").hide();                      // Hide the 'choose your character' flashers
-        $(".flasher2").show();                      // Show the 'choose your defender' flashers
+        move1 = 1234;                               // Set var move1 to 1234 
+        firstFlash();
         $(".pos11").css({                           // Make these CSS changes to Rick
             "background-color": "lightblue",
             "color": "white",
@@ -100,8 +104,7 @@ $(document).ready(function(){
             alert("One Enemy At A Time!");          // There is already an enemy selected
         } else if (move1 === 0) {                   // Else if var move1 is 0
         move1 = 2134;                               // Set var move1 to 2134
-        $(".flasher1").hide();                      // Hide the 'choose your character' flashers
-        $(".flasher2").show();                      // Show the 'choose your defender' flashers
+        firstFlash();
         $(".pos12").css({                           // Make these CSS changes to Morty
             "background-color": "lightblue",
             "color": "white",
@@ -135,8 +138,7 @@ $(document).ready(function(){
             alert("One Enemy At A Time!");          // There is already an enemy selected
         } else if (move1 === 0) {                   // Else If var move1 is 0
         move1 = 3124;                               // Set var move1 to 3124
-        $(".flasher1").hide();                      // Hide the 'choose your character' flashers
-        $(".flasher2").show();                      // Show the 'choose your defender' flashers
+        firstFlash();
         $(".pos13").css({                           // Make these CSS changes to Krombopulos
             "background-color": "lightblue",
             "color": "white",
@@ -171,8 +173,7 @@ $(document).ready(function(){
             alert("One Enemy At A Time!");          // There is already an enemy selected
         } else if (move1 === 0) {                   // Else If var move1 is 0
         move1 = 4123;                               // Set var move1 to 4123
-        $(".flasher1").hide();                      // Hide the 'choose your character' flashers 
-        $(".flasher2").show();                      // Show the 'choose your defender' flashers
+        firstFlash();
         $(".pos14").css({                           // Make these CSS changes to Lucius
             "background-color": "lightblue",
             "color": "white",
