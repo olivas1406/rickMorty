@@ -256,5 +256,5 @@ $(document).ready(function(){
     $(".resetButton").on("click", function() {
         location.reload();                  // Reload the page when the reset button is clicked
     });
-
+    
 });
