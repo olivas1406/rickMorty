@@ -96,7 +96,12 @@ body {
 
 .resetButton {
     cursor: pointer;
-    padding: 2%;
+    margin: 2%;
+    padding: 1%;
+    border-radius: 30px;
+    background-color: black;
+    color: aqua;
+
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 
