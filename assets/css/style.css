@@ -54,7 +54,6 @@ body {
     background-color: white;
     display: inline-block;
     margin: 1%;
-    /* margin: 1% 4% 2% 0; */
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     border-radius: 6px;
 }
@@ -62,7 +61,6 @@ body {
 .pos2 {
     float: left;
     text-align: center;
-    /* margin: auto 0; */
     margin: 1%;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     border-radius: 10px;
@@ -75,7 +73,6 @@ body {
     margin: auto 0;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
-
 
 .flashleft {
     text-align: center;
@@ -101,7 +98,6 @@ body {
     border-radius: 30px;
     background-color: black;
     color: aqua;
-
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 
@@ -115,9 +111,3 @@ body {
     border-radius: 20px;
     margin-left: 18%;
 }
-
-
-
-
-
-
