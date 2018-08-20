@@ -78,13 +78,20 @@ body {
 
 
 .flashleft {
-    text-align: left;
+    text-align: center;
     padding: 2%;
+    background-color: white;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    border-radius: 10px;
+
 }
 
 .flashright {
-    text-align: right;
+    text-align: center;
     padding: 2%;
+    background-color: white;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    border-radius: 10px;
 }
 
 .resetButton {
